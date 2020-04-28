@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <div id="nav">
+        <img class="logo" src="./assets/build-a-bot-logo.png"/>
+        Build a bot
+        <div class="item"><router-link to="/">Home</router-link></div>
+        <div class="item"><router-link to="/about">About</router-link></div>
+      </div>
+      <router-view/>
+    </header>
   </div>
 </template>
 
@@ -22,5 +26,25 @@ main{
   background-color: white;
   width: 1024px;
   min-height: 300px;
+}
+
+header {
+  background-color: #999;
+  width: 1084px;
+  margin: 0 auto;
+}
+.item {
+  padding: 3px;
+  display: flex;
+}
+#nav {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 22px;
+  border-right: 1px solid #bbb;
+}
+.logo {
+  vertical-align: middle;
+  height: 30px;
 }
 </style>
